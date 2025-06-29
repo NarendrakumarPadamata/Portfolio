@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naren | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+            color: #222;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #0099ff, #66ccff);
+            padding: 16px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar .logo {
+            font-family: 'Forte', cursive;
+            font-size: 2em;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        .navbar nav {
+            display: flex;
+            gap: 24px;
+        }
+        .navbar nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        .navbar nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .hero {
+            max-width: 900px;
+            margin: 60px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 0 18px rgba(0,0,0,0.10);
+            padding: 50px 30px 40px 30px;
+            text-align: center;
+        }
+        .hero img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 18px;
+            border: 4px solid #0099ff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            color: #0077cc;
+            margin-bottom: 10px;
+        }
+        .hero h2 {
+            color: #0099ff;
+            font-size: 1.3em;
+            margin-bottom: 18px;
+            font-weight: 400;
+        }
+        .hero p {
+            font-size: 1.15em;
+            color: #444;
+            margin-bottom: 28px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 10px;
+        }
+        .social-links a {
+            color: #0099ff;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .social-links a:hover {
+            color: #005fa3;
+        }
+        .section {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+            padding: 36px 30px 30px 30px;
+        }
+        .section h3 {
+            color: #0077cc;
+            margin-bottom: 18px;
+            font-size: 1.5em;
+        }
+        .skills-list, .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 10px;
+        }
+        .skills-list span {
+            background: #e3f2fd;
+            color: #0077cc;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+        .projects-list .project {
+            background: #f7fbfc;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 18px 18px 12px 18px;
+            flex: 1 1 260px;
+            min-width: 220px;
+            max-width: 320px;
+        }
+        .projects-list .project h4 {
+            margin: 0 0 8px 0;
+            color: #0099ff;
+        }
+        .projects-list .project p {
+            margin: 0 0 8px 0;
+            color: #444;
+            font-size: 1em;
+        }
+        .projects-list .project a {
+            color: #0077cc;
+            text-decoration: underline;
+            font-size: 0.98em;
+        }
+        .contact-form {
+            margin-top: 18px;
+            max-width: 400px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 16px;
+            border: 1px solid #b3e5fc;
+            border-radius: 6px;
+            font-size: 16px;
+            background: #f7fbfc;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+        .contact-form button {
+            background: #0099ff;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #0077cc;
+        }
+        footer {
+            background-color: #0099ff;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+        @media (max-width: 700px) {
+            .hero, .section {
+                padding: 20px 8px 18px 8px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 10px;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Narendra Kumar Padamata</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero" id="about">
+        <h1>Narendra Kumar Padamata</h1>
+        <h2>Web Developer & Designer</h2>
+        <h4>B.Tech in Computer Science and Engineering Specialized in <b><h3>ARTIFICIAL INTELLIGENCE & DATA SCIENCE</h3></b></h4>
+        <div class="social-links">
+            <a href="mailto:narendranaidupadamata@gmail.com" title="gmail"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/NarendrakumarPadamata" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/narendra-kumar-padamata-a2b91a307/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/naturephotophilist" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>
+            Hi! I'm Narendra Kumar, a passionate web developer with a love for building beautiful and functional websites. I enjoy turning ideas into reality using code and design. Let's create something amazing together!
+        </p>
+    </section>
+    <section class="section" id="skills">
+        <h3>Skills</h3>
+        <div class="skills-list">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Bootstrap</span> 
+            <span>MS Office - Word, Powerpoint, Excel</span>
+            <span>Python</span>
+            <span>Git & GitHub</span>
+            <span>Creative Writing</span>
+            <span>Problem Solving</span>
+            <span>Team Collaboration</span>
+            <span>Story Writing and Narration</span>
+        </div>
+    </section>
+    <section class="section" id="projects">
+        <h3>Projects</h3>
+        <div class="projects-list">
+            <div class="project">
+                <h4>Organic Farming  Awareness Campaign</h4>
+                <p>Organic farming awareness campaigns play a crucial role in educating communities about the benefits of sustainable agriculture. These campaigns highlight the importance of using natural methods for crop cultivation, reducing the reliance on chemical fertilizers and pesticides. By promoting organic farming, the campaigns encourage healthier food choices, environmental conservation, and improved soil fertility. They also aim to support local farmers, increase public understanding of eco-friendly practices, and inspire a shift towards a more sustainable and healthier lifestyle for both producers and consumers.</p>
+                <a href="#" target="_blank">View the Documentation</a>
+            </div>
+            <div class="project">
+                <h4>AI Task Assistant</h4>
+                <p>I developed an AI-powered assistant designed to help users save, organize, and remember their day-to-day tasks, including where and when they want to complete them. This project uses <b>Node.js</b> and <b>React.js</b> for the backend and frontend, and leverages advanced prompt engineering techniques for effective task management. The AI assistant can communicate with users using natural language processing (NLP), allowing it to understand, speak, and interact naturally. Users can simply talk to the AI to add, update, or recall tasks, making daily organization seamless and interactive.</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+                <div class="project">
+                    <h4>Student Attendance System</h4>
+                    <p>A simple web application which can monitor and save the student Attendance data and make useful insights using graphs and Graphical representation techniques</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+            </div>
+        </section>
+    <section class="section" id="Internships">
+        <h3>Internships</h3>
+        <div class="Internships-list">
+            <div class="internship">
+                <p><h4>Frontend Web Technologies </h4><h2>From</h2><h4><b>TECHYUVA</b></h4></p>
+                <p>During my Frontend Web Technology internship at Tech Yuva, Eluru, I gained hands-on experience in designing and developing responsive web interfaces using HTML, CSS, and JavaScript. I collaborated with a dynamic team to build user-friendly websites, optimized for performance and accessibility. This internship enhanced my skills in modern frontend frameworks and deepened my understanding of UI/UX principles, version control with Git, and real-world project workflows. My time at Tech Yuva strengthened my problem-solving abilities and prepared me for future challenges in web development.</p>
+                <a href="#" target="_blank">View Certificate</a>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <h3>Contact Me</h3>
+        <form class="contact-form" autocomplete="off" onsubmit="event.preventDefault(); alert('Thank you for reaching out! I will get back to you soon.'); this.reset();">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Type your message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Narendra Kumar Padamata. All rights reserved.</p>
+    </footer>
+</body>
+</html>
